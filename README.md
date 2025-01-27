@@ -1,6 +1,6 @@
 # mandalor-eks-vanilla
 
-Repositório do cluster minimo de EKS do curso
+Repositório do cluster minimo de EKS
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
