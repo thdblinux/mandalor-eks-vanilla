@@ -18,24 +18,6 @@ variable "ssm_vpc" {
   description = "ID do SSM onde está o id da VPC onde o projeto será criado"
 }
 
-variable "addon_cni_version" {
-  type        = string
-  default     = "v1.18.3-eksbuild.2"
-  description = "Versão do Addon da VPC CNI"
-}
-
-variable "addon_coredns_version" {
-  type        = string
-  default     = "v1.11.3-eksbuild.1"
-  description = "Versão do Addon do CoreDNS"
-}
-
-variable "addon_kubeproxy_version" {
-  type        = string
-  default     = "v1.31.2-eksbuild.3"
-  description = "Versão do Addon do Kube-Proxy"
-}
-
 variable "ssm_public_subnets" {
   type        = list(string)
   description = "Lista dos ID's do SSM onde estão as subnets públicas do projeto"
@@ -61,5 +43,24 @@ variable "auto_scale_options" {
 }
 
 variable "nodes_instance_sizes" {
-  type = list(string)
+  type        = list(string)
+  description = "Lista de tamanhos das instâncias do projeto"
+}
+
+variable "addon_cni_version" {
+  type        = string
+  default     = "v1.18.3-eksbuild.2"
+  description = "Versão do Addon da VPC CNI"
+}
+
+variable "addon_coredns_version" {
+  type        = string
+  default     = "v1.11.3-eksbuild.1"
+  description = "Versão do Addon do CoreDNS"
+}
+
+variable "addon_kubeproxy_version" {
+  type        = string
+  default     = "v1.31.2-eksbuild.3"
+  description = "Versão do Addon do Kube-Proxy"
 }
