@@ -20,20 +20,26 @@ variable "ssm_vpc" {
 
 variable "addon_cni_version" {
   type        = string
-  default     = "v1.19.2-eksbuild.1"
+  default     = "v1.20.4-eksbuild.2"
   description = "Versão do Addon da VPC CNI"
 }
 
 variable "addon_coredns_version" {
   type        = string
-  default     = "v1.11.4-eksbuild.2"
+  default     = "v1.12.1-eksbuild.2"
   description = "Versão do Addon do CoreDNS"
 }
 
 variable "addon_kubeproxy_version" {
   type        = string
-  default     = "v1.31.3-eksbuild.2"
+  default     = "v1.33.3-eksbuild.4"
   description = "Versão do Addon do Kube-Proxy"
+}
+
+variable "addon_pod_identity_version" {
+  type        = string
+  default     = "v1.3.10-eksbuild.2"
+  description = "Versão do Addon do Pod Identity"
 }
 
 variable "ssm_public_subnets" {
