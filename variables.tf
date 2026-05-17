@@ -8,6 +8,12 @@ variable "region" {
   description = "Nome da região onde os recursos serão entregues"
 }
 
+variable "profile" {
+  type        = string
+  description = "AWS CLI profile a ser usado"
+  default     = "default"
+}
+
 variable "k8s_version" {
   type        = string
   description = "Versão do kubernetes do projeto"
@@ -20,25 +26,25 @@ variable "ssm_vpc" {
 
 variable "addon_cni_version" {
   type        = string
-  default     = "v1.20.4-eksbuild.2"
+  default     = "v1.20.5-eksbuild.1"
   description = "Versão do Addon da VPC CNI"
 }
 
 variable "addon_coredns_version" {
   type        = string
-  default     = "v1.12.1-eksbuild.2"
+  default     = "v1.13.2-eksbuild.7"
   description = "Versão do Addon do CoreDNS"
 }
 
 variable "addon_kubeproxy_version" {
   type        = string
-  default     = "v1.33.3-eksbuild.4"
+  default     = "v1.34.6-eksbuild.2"
   description = "Versão do Addon do Kube-Proxy"
 }
 
 variable "addon_pod_identity_version" {
   type        = string
-  default     = "v1.3.10-eksbuild.2"
+  default     = "v1.3.10-eksbuild.3"
   description = "Versão do Addon do Pod Identity"
 }
 
@@ -75,5 +81,5 @@ variable "nodes_instance_sizes" {
 # variable "custom_ami" {
 #   type        = string
 #   description = "AMI ID customizada para os nodes"
-#   default     = "ami-07223d3a97d8ce832"
+#   default     = "ami-0f5fd2bf69b780f6f"
 # }

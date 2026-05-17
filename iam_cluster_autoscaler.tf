@@ -48,7 +48,10 @@ data "aws_iam_policy_document" "autoscaler_policy" {
       "autoscaling:DescribeInstanceRefreshes",
       "autoscaling:SetDesiredCapacity",
       "autoscaling:TerminateInstanceInAutoScalingGroup",
-      "ec2:DescribeLaunchTemplateVersions"
+      "ec2:DescribeLaunchTemplateVersions",
+      "ec2:DescribeInstanceTypes",
+      "ec2:DescribeInstances",
+      "eks:DescribeNodegroup"
     ]
 
     resources = [

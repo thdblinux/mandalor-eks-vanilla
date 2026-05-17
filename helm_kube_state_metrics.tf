@@ -4,7 +4,6 @@ resource "helm_release" "kube_state_metrics" {
   chart            = "kube-state-metrics"
   namespace        = "kube-system"
   create_namespace = true
-  atomic           = true  # Isso faz rollback automático em caso de falha
 
   set = [
     {
